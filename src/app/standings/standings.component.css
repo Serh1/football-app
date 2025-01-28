@@ -1,0 +1,13 @@
+
+.name-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+span{
+  height: 100%;
+  display: flex;
+  align-content: center;
+
+}
