@@ -95,7 +95,7 @@ export class StandingsComponent {
     }
   ];
 
-  displayedColumns: string[] = ['position', 'progress', 'name', 'wins', 'draws', 'loses', 'points'];
+  displayedColumns: string[] = ['position', 'progress', 'name', 'wins', 'draws', 'losses', 'points'];
 
   constructor() {
     this.teams = this.teams.sort((t1, t2) => t2.points - t1.points);
