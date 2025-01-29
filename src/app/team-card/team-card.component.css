@@ -1,0 +1,13 @@
+
+.team-card {
+  width: 100%
+}
+
+.logo-wrapper {
+  margin: 25px 56px;
+}
+
+mat-card-actions {
+  flex-direction: row-reverse;
+  padding-bottom: 24px;
+}
