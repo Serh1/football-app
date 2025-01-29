@@ -1,6 +1,22 @@
 
 .team-card {
-  width: 100%
+  width: 100%;
+}
+
+.team-details{
+  display: flex;
+  justify-content: center;
+}
+
+mat-card-title{
+  display: flex;
+  justify-content: center;
+}
+
+mat-card-subtitle{
+  display: flex;
+  justify-content: center;
+  opacity: 50%;
 }
 
 .logo-wrapper {
@@ -8,6 +24,8 @@
 }
 
 mat-card-actions {
+  display: flex;
+  justify-content: center;
   flex-direction: row-reverse;
   padding-bottom: 24px;
 }
