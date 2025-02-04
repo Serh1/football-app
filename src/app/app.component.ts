@@ -6,19 +6,20 @@ import {TeamsComponent} from './teams/teams.component';
 import {GamesComponent} from './games/games.component';
 import {TeamsService} from './services/teams.service';
 import {Team} from './models/team';
+import {DummyComponent} from './dummy/dummy.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatTabGroup, MatTab, StandingsComponent, TeamsComponent, GamesComponent],
+  imports: [RouterOutlet, MatTabGroup, MatTab, StandingsComponent, TeamsComponent, GamesComponent, DummyComponent],
   templateUrl: './app.component.html',
   standalone: true,
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  teamsService = inject(TeamsService);
+  // teamsService = inject(TeamsService);
   teams: Team[];
 
-  constructor() {
+  constructor(private teamsService: TeamsService) {
     this.teams = this.loadTeams()
   }
 
