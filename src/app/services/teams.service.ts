@@ -14,7 +14,7 @@ export class TeamsService {
       {
         id: 1,
         name: 'FC Barcelona',
-        league: 'La Liga',
+        country: 'Spain',
         logo: 'assets/images/barcelona.png',
         gamesPlayed: 10,
         wins: 7,
@@ -25,7 +25,7 @@ export class TeamsService {
       {
         id: 2,
         name: 'Manchester United',
-        league: 'Premier League',
+        country: 'England',
         logo: 'assets/images/manutd.png',
         gamesPlayed: 10,
         wins: 7,
@@ -36,7 +36,7 @@ export class TeamsService {
       {
         id: 3,
         name: 'Real Madrid',
-        league: 'La Liga',
+        country: 'Spain',
         logo: 'assets/images/realmadrid.png',
         gamesPlayed: 10,
         wins: 8,
@@ -47,7 +47,7 @@ export class TeamsService {
       {
         id: 4,
         name: 'Liverpool',
-        league: 'Premier League',
+        country: 'England',
         logo: 'assets/images/liverpool.png',
         gamesPlayed: 10,
         wins: 5,
@@ -58,7 +58,7 @@ export class TeamsService {
       {
         id: 5,
         name: 'PSG',
-        league: 'Ligue 1',
+        country: 'France',
         logo: 'assets/images/psg.png',
         gamesPlayed: 10,
         wins: 7,
@@ -69,7 +69,7 @@ export class TeamsService {
       {
         id: 6,
         name: 'Bayern Munich',
-        league: 'Bundesliga',
+        country: 'Germany',
         logo: 'assets/images/bayern.png',
         gamesPlayed: 10,
         wins: 8,

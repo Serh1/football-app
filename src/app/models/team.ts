@@ -1,7 +1,7 @@
 export interface Team {
   id: number;
   name: string;
-  league: string;
+  country: string;
   logo: string;
   gamesPlayed: number;
   wins: number;
