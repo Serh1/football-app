@@ -5,6 +5,7 @@
     <mat-card-subtitle>{{ team()?.country }}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-actions class="team-actions">
-    <button mat-flat-button>See Players</button>
+    <button mat-button (click)="openDialog()">Open dialog</button>
+
   </mat-card-actions>
 </mat-card>

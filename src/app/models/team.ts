@@ -8,4 +8,11 @@ export interface Team {
   draws: number;
   losses: number;
   points: number;
+  players: Player[];
 }
+export interface Player {
+  id: number;
+  name: string;
+  position: string;
+}
+
