@@ -123,7 +123,7 @@ export class TeamsService {
             name: 'Luka Modric',
             position: 'Midfielder',
           },
-      ]
+        ]
       },
       {
         id: 4,
@@ -161,7 +161,7 @@ export class TeamsService {
             name: 'Fabinho',
             position: 'Midfielder',
           },
-      ]
+        ]
       },
       {
         id: 5,
@@ -199,7 +199,7 @@ export class TeamsService {
             name: 'Marco Verratti',
             position: 'Midfielder',
           },
-      ]
+        ]
       },
       {
         id: 6,
@@ -237,7 +237,7 @@ export class TeamsService {
             name: 'Thomas Muller',
             position: 'Forward',
           },
-      ]
+        ]
       }
     ];
   }
