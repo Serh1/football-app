@@ -1,7 +1,4 @@
-import { Component, Input, inject } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { Team } from '../models/team';
-import { PlayersDialogComponent } from '../players-dialog/players-dialog.component';
+import {Component, inject, Input} from '@angular/core';
 import {
   MatCard,
   MatCardActions,
@@ -10,22 +7,25 @@ import {
   MatCardSubtitle,
   MatCardTitle,
 } from '@angular/material/card';
-import { MatButton } from '@angular/material/button';
+import {MatButton} from '@angular/material/button';
+import {Team} from '../models/team';
+import {MatDialog} from '@angular/material/dialog';
+import {PlayersDialogComponent} from '../players-dialog/players-dialog.component';
 
 @Component({
   selector: 'app-team-card',
-  templateUrl: './team-card.component.html',
-  standalone: true,
-  styleUrls: ['./team-card.component.css'],  // beachte "styleUrls" statt "styleUrl"
   imports: [
-    MatCard,
-    MatCardHeader,
-    MatCardImage,
     MatCardTitle,
     MatCardSubtitle,
+    MatCardHeader,
+    MatCardImage,
     MatCardActions,
-    MatButton
-  ]
+    MatButton,
+    MatCard
+  ],
+  templateUrl: './team-card.component.html',
+  standalone: true,
+  styleUrl: './team-card.component.css'
 })
 export class TeamCardComponent {
   @Input() team!: Team; // Korrekte Deklaration des Inputs
@@ -33,10 +33,12 @@ export class TeamCardComponent {
   dialog = inject(MatDialog);
 
   openDialog() {
-    this.dialog.open(PlayersDialogComponent, {
-      data: { team: this.team }, // Übergabe des Team-Objekts unter dem Schlüssel "team"
-      width: '330px',
-      height: '300px',
-    });
+    console.log(this.team);
+    this.dialog.open(PlayersDialogComponent,
+      {
+        data: {team: this.team}, // Übergabe des Team-Objekts unter dem Schlüssel "team"
+        width: '330px',
+        height: '300px',
+      });
   }
 }

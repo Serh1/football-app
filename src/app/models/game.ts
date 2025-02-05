@@ -5,5 +5,6 @@ export interface Game {
   score_team1: number;
   score_team2: number;
 
+
 }
 

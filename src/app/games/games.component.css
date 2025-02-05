@@ -7,3 +7,21 @@ table {
   align-items: center;
   gap: 8px; /* Abstand zwischen Logo und Name */
 }
+table {
+  width: 100%;
+}
+
+.name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Abstand zwischen Logo und Name */
+}
+table {
+  width: 100%;
+}
+
+.name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Abstand zwischen Logo und Name */
+}
