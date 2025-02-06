@@ -8,4 +8,5 @@ export interface Team {
   draws: number;
   losses: number;
   points: number;
+  league: string;
 }

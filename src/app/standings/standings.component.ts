@@ -1,4 +1,4 @@
-import {Component, input} from '@angular/core';
+import {Component, Input, input} from '@angular/core';
 import {Team} from '../models/team';
 import {
   MatCell,
@@ -27,7 +27,8 @@ import {MatSort} from '@angular/material/sort';
     MatHeaderRow,
     MatRow,
     MatHeaderRowDef,
-    MatRowDef
+    MatRowDef,
+
   ],
   templateUrl: './standings.component.html',
   standalone: true,
@@ -37,7 +38,8 @@ export class StandingsComponent {
 
   displayedColumns: string[] = ['position', 'progress', 'name', 'wins', 'draws', 'losses', 'points'];
 
-  teams = input.required<Team[]>();
-
-
+  @Input() teams: Team[] = [];
+  getTeamsByLeague(league: string): Team[] {
+    return this.teams.filter((team: Team) => team.league === league);
+  }
 }
