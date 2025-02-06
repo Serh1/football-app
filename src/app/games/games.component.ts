@@ -1,40 +1,17 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { GamesService } from '../services/games.service';
-import { Game } from '../models/game';
 import { TeamsService } from '../services/teams.service';
-import {
-  MatCell,
-  MatCellDef,
-  MatColumnDef,
-  MatHeaderCell,
-  MatHeaderCellDef,
-  MatHeaderRow,
-  MatHeaderRowDef,
-  MatRow,
-  MatRowDef,
-  MatTable
-} from '@angular/material/table';
+import { MatExpansionModule } from '@angular/material/expansion';
+import {NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-games',
   templateUrl: './games.component.html',
   styleUrls: ['./games.component.css'],
   standalone: true,
-  imports: [
-    MatColumnDef,
-    MatTable,
-    MatHeaderCellDef,
-    MatHeaderCell,
-    MatCell,
-    MatCellDef,
-    MatHeaderRowDef,
-    MatHeaderRow,
-    MatRow,
-    MatRowDef
-  ]
+  imports: [MatExpansionModule, NgForOf]
 })
 export class GamesComponent implements OnInit {
-  displayedColumns: string[] = ['game_id', 'team1', 'team2', 'score_team1', 'score_team2'];
   dataSource: any[] = [];
 
   private gamesService = inject(GamesService);
