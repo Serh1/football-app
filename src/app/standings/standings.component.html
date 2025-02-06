@@ -95,7 +95,6 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-
   <h1>Premier League</h1>
 
   <table mat-table [dataSource]="getTeamsByLeague('Premier League')" matSort>
@@ -145,4 +144,3 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 </div>
-
