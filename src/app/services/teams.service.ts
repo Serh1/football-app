@@ -49,7 +49,7 @@ export class TeamsService {
           },
         ],
         points: 23,
-        league: 'La Liga'
+        league: 'LaLiga'
       },
       {
         id: 2,
@@ -89,7 +89,7 @@ export class TeamsService {
           },
         ],
         points: 27,
-        league: 'La Liga'
+        league: 'LaLiga'
       },
       {
         id: 3,
@@ -129,7 +129,7 @@ export class TeamsService {
           },
         ],
         points: 25,
-        league: 'La Liga'
+        league: 'Bundesliga'
       },
       {
         id: 4,
@@ -169,7 +169,8 @@ export class TeamsService {
           },
         ],
         points: 18,
-        league: 'La Liga'
+        league: 'Bundesliga'
+
       },
       {
         id: 5,
@@ -209,7 +210,8 @@ export class TeamsService {
           },
         ],
         points: 23,
-        league: 'La Liga'
+        league: 'Premier League'
+
       },
       {
         id: 6,
@@ -249,7 +251,8 @@ export class TeamsService {
           },
         ],
         points: 25,
-        league: 'La Liga'
+        league: 'Premier League'
+
       }
     ];
   }
