@@ -21,7 +21,7 @@ export class TeamsService {
         draws: 2,
         losses: 1,
         points: 23,
-        league: 'La Liga'
+        league: 'LaLiga'
       },
       {
         id: 2,
@@ -33,7 +33,7 @@ export class TeamsService {
         draws: 2,
         losses: 2,
         points: 27,
-        league: 'La Liga'
+        league: 'LaLiga'
 
       },
       {
@@ -46,7 +46,7 @@ export class TeamsService {
         draws: 1,
         losses: 1,
         points: 25,
-        league: 'La Liga'
+        league: 'Bundesliga'
 
       },
       {
@@ -59,7 +59,7 @@ export class TeamsService {
         draws: 3,
         losses: 2,
         points: 18,
-        league: 'La Liga'
+        league: 'Bundesliga'
 
       },
       {
@@ -72,7 +72,7 @@ export class TeamsService {
         draws: 2,
         losses: 1,
         points: 23,
-        league: 'La Liga'
+        league: 'Premier League'
 
       },
       {
@@ -85,7 +85,7 @@ export class TeamsService {
         draws: 1,
         losses: 1,
         points: 25,
-        league: 'La Liga'
+        league: 'Premier League'
 
       }
     ];
