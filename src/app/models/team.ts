@@ -9,6 +9,7 @@ export interface Team {
   losses: number;
   points: number;
   players: Player[];
+  league: string;
 }
 export interface Player {
   id: number;

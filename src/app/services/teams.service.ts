@@ -48,6 +48,8 @@ export class TeamsService {
             position: 'Midfielder',
           },
         ],
+        points: 23,
+        league: 'La Liga'
       },
       {
         id: 2,
@@ -86,6 +88,8 @@ export class TeamsService {
             position: 'Midfielder',
           },
         ],
+        points: 27,
+        league: 'La Liga'
       },
       {
         id: 3,
@@ -123,7 +127,9 @@ export class TeamsService {
             name: 'Luka Modric',
             position: 'Midfielder',
           },
-        ]
+        ],
+        points: 25,
+        league: 'La Liga'
       },
       {
         id: 4,
@@ -161,7 +167,9 @@ export class TeamsService {
             name: 'Fabinho',
             position: 'Midfielder',
           },
-        ]
+        ],
+        points: 18,
+        league: 'La Liga'
       },
       {
         id: 5,
@@ -199,7 +207,9 @@ export class TeamsService {
             name: 'Marco Verratti',
             position: 'Midfielder',
           },
-        ]
+        ],
+        points: 23,
+        league: 'La Liga'
       },
       {
         id: 6,
@@ -237,7 +247,9 @@ export class TeamsService {
             name: 'Thomas Muller',
             position: 'Forward',
           },
-        ]
+        ],
+        points: 25,
+        league: 'La Liga'
       }
     ];
   }
