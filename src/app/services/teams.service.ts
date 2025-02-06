@@ -250,4 +250,6 @@ export class TeamsService {
     ];
   }
 
+//   TODO: Get a team from id
+
 }
