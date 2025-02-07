@@ -48,7 +48,6 @@ export class TeamsService {
             position: 'Midfielder',
           },
         ],
-        points: 23,
         league: 'LaLiga'
       },
       {
@@ -88,7 +87,6 @@ export class TeamsService {
             position: 'Midfielder',
           },
         ],
-        points: 27,
         league: 'LaLiga'
       },
       {
@@ -128,7 +126,6 @@ export class TeamsService {
             position: 'Midfielder',
           },
         ],
-        points: 25,
         league: 'Bundesliga'
       },
       {
@@ -168,7 +165,6 @@ export class TeamsService {
             position: 'Midfielder',
           },
         ],
-        points: 18,
         league: 'Bundesliga'
 
       },
@@ -209,7 +205,6 @@ export class TeamsService {
             position: 'Midfielder',
           },
         ],
-        points: 23,
         league: 'Premier League'
 
       },
@@ -250,13 +245,9 @@ export class TeamsService {
             position: 'Forward',
           },
         ],
-        points: 25,
         league: 'Premier League'
-
       }
     ];
   }
-
-//   TODO: Get a team from id
 
 }

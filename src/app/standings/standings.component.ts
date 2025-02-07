@@ -1,4 +1,4 @@
-import {Component, Input, input} from '@angular/core';
+import {Component, input} from '@angular/core';
 import {Team} from '../models/team';
 import {
   MatCell,
@@ -28,17 +28,13 @@ import {MatSort} from '@angular/material/sort';
     MatRow,
     MatHeaderRowDef,
     MatRowDef,
-
   ],
   templateUrl: './standings.component.html',
   standalone: true,
   styleUrl: './standings.component.css'
 })
 export class StandingsComponent {
-
   displayedColumns: string[] = ['position', 'progress', 'name', 'wins', 'draws', 'losses', 'points'];
-
   teams = input.required<Team[]>();
-
 
 }
