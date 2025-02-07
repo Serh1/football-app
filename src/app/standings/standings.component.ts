@@ -27,7 +27,7 @@ import {MatSort} from '@angular/material/sort';
     MatHeaderRow,
     MatRow,
     MatHeaderRowDef,
-    MatRowDef,
+    MatRowDef
   ],
   templateUrl: './standings.component.html',
   standalone: true,
