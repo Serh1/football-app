@@ -48,6 +48,7 @@ export class TeamsService {
             position: 'Midfielder',
           },
         ],
+        league: 'LaLiga'
       },
       {
         id: 2,
@@ -86,6 +87,7 @@ export class TeamsService {
             position: 'Midfielder',
           },
         ],
+        league: 'LaLiga'
       },
       {
         id: 3,
@@ -123,7 +125,8 @@ export class TeamsService {
             name: 'Luka Modric',
             position: 'Midfielder',
           },
-        ]
+        ],
+        league: 'Bundesliga'
       },
       {
         id: 4,
@@ -161,7 +164,9 @@ export class TeamsService {
             name: 'Fabinho',
             position: 'Midfielder',
           },
-        ]
+        ],
+        league: 'Bundesliga'
+
       },
       {
         id: 5,
@@ -199,7 +204,9 @@ export class TeamsService {
             name: 'Marco Verratti',
             position: 'Midfielder',
           },
-        ]
+        ],
+        league: 'Premier League'
+
       },
       {
         id: 6,
@@ -237,11 +244,10 @@ export class TeamsService {
             name: 'Thomas Muller',
             position: 'Forward',
           },
-        ]
+        ],
+        league: 'Premier League'
       }
     ];
   }
-
-//   TODO: Get a team from id
 
 }

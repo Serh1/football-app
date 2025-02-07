@@ -27,17 +27,14 @@ import {MatSort} from '@angular/material/sort';
     MatHeaderRow,
     MatRow,
     MatHeaderRowDef,
-    MatRowDef
+    MatRowDef,
   ],
   templateUrl: './standings.component.html',
   standalone: true,
   styleUrl: './standings.component.css'
 })
 export class StandingsComponent {
-
   displayedColumns: string[] = ['position', 'progress', 'name', 'wins', 'draws', 'losses', 'points'];
-
   teams = input.required<Team[]>();
-
 
 }

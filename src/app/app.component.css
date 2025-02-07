@@ -1,7 +1,7 @@
 
 .main {
   background: #F1F3FF;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
 }
@@ -11,3 +11,4 @@
   background: #ececec;
   padding: 20px;
 }
+
