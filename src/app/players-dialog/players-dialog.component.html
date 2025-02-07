@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Players</h2>
+<mat-dialog-content>
+  <ul>
+    <li *ngFor="let player of data.team.players">
+      {{ player.name }} - {{ player.position }}
+    </li>
+  </ul>
+</mat-dialog-content>

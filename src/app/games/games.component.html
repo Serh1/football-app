@@ -1,1 +1,20 @@
-<p>games works!</p>
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let game of dataSource">
+    <mat-expansion-panel-header>
+      <div class="game-header">
+        <div class="team">
+          <img [src]="game.team1.logo" alt="{{game.team1.name}}" class="team-logo">
+          <span>{{ game.team1.name }}</span>
+        </div>
+        <div class="score">
+          {{ game.score_team1 }} : {{ game.score_team2 }}
+        </div>
+        <div class="team">
+          <span>{{ game.team2.name }}</span>
+          <img [src]="game.team2.logo" alt="{{game.team2.name}}" class="team-logo">
+        </div>
+      </div>
+    </mat-expansion-panel-header>
+    <p>Test</p>
+  </mat-expansion-panel>
+</mat-accordion>

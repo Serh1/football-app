@@ -1,0 +1,44 @@
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+}
+
+.team-logo {
+  width: 70px;
+  height: 70px;
+  margin: 20px;
+  margin-top: 60px;
+}
+
+.score {
+  font-weight: bold;
+  font-size: 1.2em;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 70px;
+}
+
+mat-expansion-panel {
+  min-height: 100px;
+  width: 800px;
+}
+
+mat-accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px; /* Adjust the value as needed */
+}
+.team span {
+  margin-top: 50px; /* Adjust the value as needed */
+}
