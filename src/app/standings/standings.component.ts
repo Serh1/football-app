@@ -38,17 +38,19 @@ export class StandingsComponent {
 
   displayedColumns: string[] = ['position', 'progress', 'name', 'wins', 'draws', 'losses', 'points'];
 
-  // @Input() teams: Team[] = [];
+  leagues: [Team[], Team[], Team[]] = [[], [], []];
+
 
   constructor(private ts: TeamsService) {
+    this.getTeamsByLeague(1);
+    this.getTeamsByLeague(2);
+    this.getTeamsByLeague(3);
   }
 
-  getTeamsByLeague(league: number): Team[] {
-    let teamsTemp: Team[] = [];
+  getTeamsByLeague(league: number): void {
     this.ts.getAllTeams(league).subscribe(teams => {
-        teamsTemp = teams;
+        this.leagues[league - 1] = teams;
       }
     )
-    return teamsTemp;
   }
 }

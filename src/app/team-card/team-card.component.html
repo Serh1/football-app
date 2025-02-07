@@ -1,5 +1,5 @@
 <mat-card class="team-card" appearance="raised">
-  <img mat-card-image [src]="team.logo" class="logo-wrapper" width="130" height="130" alt="team_logo">
+  <img mat-card-image [src]="'http://localhost:8080/' + team.logo" class="logo-wrapper" width="130" height="130" alt="team_logo">
   <mat-card-header class="team-details">
     <mat-card-title>{{ team.name }}</mat-card-title>
     <mat-card-subtitle>{{ team.country }}</mat-card-subtitle>

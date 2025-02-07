@@ -1,6 +1,6 @@
 <div class="mat-elevation-z8">
   <h1>Bundesliga</h1>
-  <table mat-table [dataSource]="getTeamsByLeague(1)" matSort>
+  <table mat-table [dataSource]="leagues[0]" matSort>
     <!-- Position Column -->
     <ng-container matColumnDef="position">
       <th mat-header-cell *matHeaderCellDef> Position</th>
@@ -49,7 +49,7 @@
 
   <h1>LaLiga</h1>
 
-  <table mat-table [dataSource]="getTeamsByLeague(2)" matSort>
+  <table mat-table [dataSource]="leagues[1]" matSort>
     <!-- Position Column -->
     <ng-container matColumnDef="position">
       <th mat-header-cell *matHeaderCellDef> Position</th>
@@ -98,7 +98,7 @@
 
   <h1>Premier League</h1>
 
-  <table mat-table [dataSource]="getTeamsByLeague(3)" matSort>
+  <table mat-table [dataSource]="leagues[2]" matSort>
     <!-- Position Column -->
     <ng-container matColumnDef="position">
       <th mat-header-cell *matHeaderCellDef> Position</th>
