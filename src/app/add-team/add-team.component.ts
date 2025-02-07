@@ -36,6 +36,7 @@ export class AddTeamComponent {
         draws: 0,
         losses: 0,
         points: 0,
+        players: [],
         league: '' // Keine Liga
       });
 
