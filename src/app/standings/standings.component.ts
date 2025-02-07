@@ -1,4 +1,4 @@
-import {Component, Input, input} from '@angular/core';
+import {Component} from '@angular/core';
 import {Team} from '../models/team';
 import {
   MatCell,
@@ -13,6 +13,7 @@ import {
   MatTable
 } from '@angular/material/table';
 import {MatSort} from '@angular/material/sort';
+import {TeamsService} from '../services/teams.service';
 
 @Component({
   selector: 'app-standings',
@@ -37,8 +38,17 @@ export class StandingsComponent {
 
   displayedColumns: string[] = ['position', 'progress', 'name', 'wins', 'draws', 'losses', 'points'];
 
-  @Input() teams: Team[] = [];
-  getTeamsByLeague(league: string): Team[] {
-    return this.teams.filter((team: Team) => team.league === league);
+  // @Input() teams: Team[] = [];
+
+  constructor(private ts: TeamsService) {
+  }
+
+  getTeamsByLeague(league: number): Team[] {
+    let teamsTemp: Team[] = [];
+    this.ts.getAllTeams(league).subscribe(teams => {
+        teamsTemp = teams;
+      }
+    )
+    return teamsTemp;
   }
 }
