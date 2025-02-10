@@ -19,24 +19,24 @@ export class GamesComponent implements OnInit {
 
   ngOnInit(): void {
     const games = this.gamesService.getAllGames();
-    const teams = this.teamsService.getAllTeams();
+    const teams = this.teamsService.getAllTeams(1);
 
-    this.dataSource = games.map(game => {
-      const team1 = teams.find(team => team.id === game.team1_id);
-      const team2 = teams.find(team => team.id === game.team2_id);
-      return {
-        game_id: game.game_id,
-        team1: {
-          name: team1 ? team1.name : 'Unknown',
-          logo: team1 ? team1.logo : ''
-        },
-        team2: {
-          name: team2 ? team2.name : 'Unknown',
-          logo: team2 ? team2.logo : ''
-        },
-        score_team1: game.score_team1,
-        score_team2: game.score_team2
-      };
-    });
+    // this.dataSource = games.map(game => {
+    //   const team1 = teams.find(team => team.id === game.team1_id);
+    //   const team2 = teams.find(team => team.id === game.team2_id);
+    //   return {
+    //     game_id: game.game_id,
+    //     team1: {
+    //       name: team1 ? team1.name : 'Unknown',
+    //       logo: team1 ? team1.logo : ''
+    //     },
+    //     team2: {
+    //       name: team2 ? team2.name : 'Unknown',
+    //       logo: team2 ? team2.logo : ''
+    //     },
+    //     score_team1: game.score_team1,
+    //     score_team2: game.score_team2
+    //   };
+    // });
   }
 }

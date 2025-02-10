@@ -15,14 +15,16 @@ import { Team } from './models/team';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  teams: Team[];
+  teams!: Team[];
 
   constructor(private teamsService: TeamsService) {
-    this.teams = this.loadTeams();
+    this.loadTeams();
   }
 
   loadTeams() {
-    const teams = this.teamsService.getAllTeams();
-    return teams.sort((t1, t2) => t2.points - t1.points);
+    this.teamsService.getAllTeams().subscribe(teams => {
+      this.teams = teams;
+    });
+
   }
 }
