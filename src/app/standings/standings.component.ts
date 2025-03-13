@@ -39,5 +39,4 @@ export class StandingsComponent {
 
   teams = input.required<Team[]>();
 
-
 }

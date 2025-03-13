@@ -5,6 +5,6 @@
     <mat-card-subtitle>{{ team()?.league }}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-actions class="team-actions">
-    <button mat-flat-button>See Players</button>
+    <button mat-flat-button (click)="onSeePlayers(team()?.name)">See Players</button>
   </mat-card-actions>
 </mat-card>

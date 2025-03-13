@@ -6,6 +6,7 @@ import {TeamsComponent} from './teams/teams.component';
 import {GamesComponent} from './games/games.component';
 import {TeamsService} from './services/teams.service';
 import {Team} from './models/team';
+import {Player} from './models/player';
 
 @Component({
   selector: 'app-root',
@@ -17,9 +18,11 @@ import {Team} from './models/team';
 export class AppComponent {
   teamsService = inject(TeamsService);
   teams: Team[];
+  players: Player[];
 
   constructor() {
     this.teams = this.loadTeams()
+    this.players = this.loadPlayers()
   }
 
   loadTeams() {
@@ -27,4 +30,8 @@ export class AppComponent {
     return teams.sort((t1, t2) => t2.points - t1.points);
   }
 
+  loadPlayers(){
+    const players = this.teamsService.getAllPlayers();
+    return players;
+  }
 }
