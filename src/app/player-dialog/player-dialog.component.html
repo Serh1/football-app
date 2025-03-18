@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Players</h2>
+<mat-dialog-content>
+  @for (player of players; track player.id) {
+    @if (player.club === data) {
+      <div class="playerContainer">
+        <div class="playerId">{{player.id}}</div>
+        <div class="playerName">{{ player.firstName }} {{ player.lastName }}
+          <div class="playerPosition">{{ player.position }}</div>
+        </div>
+      </div>
+    }
+  }
+</mat-dialog-content>

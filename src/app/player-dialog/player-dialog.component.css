@@ -1,0 +1,24 @@
+.playerContainer{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  align-items: center;
+}
+
+.playerId{
+  width: 35px;
+  padding-right: 5px;
+  font-size: large;
+  text-align: center;
+}
+
+.playerName{
+  padding-left: 15px;
+  border-left: solid 1px;
+  border-left-color: darkslategray;
+  font-size: medium;
+}
+
+.playerPosition{
+  font-size: small;
+}
