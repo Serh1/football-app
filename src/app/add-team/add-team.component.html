@@ -1,0 +1,30 @@
+<mat-card class="teams-wrapper">
+  <mat-card-header>
+    <mat-card-title>Add a Team</mat-card-title>
+  </mat-card-header>
+
+  <mat-form-field class="teamInput">
+    <mat-label>Team Name</mat-label>
+    <input matInput type="text" [(ngModel)]="newTeam.name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>League</mat-label>
+    <input matInput type="text" [(ngModel)]="newTeam.league">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Amount of Wins</mat-label>
+    <input matInput type="number" [(ngModel)]="newTeam.wins">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Amount of Losses</mat-label>
+    <input matInput type="number" [(ngModel)]="newTeam.losses">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Amount of Draws</mat-label>
+    <input matInput type="number" [(ngModel)]="newTeam.draws">
+  </mat-form-field>
+
+  <mat-card-actions>
+    <button mat-flat-button (click)="onAddTeam()">Add Team</button>
+  </mat-card-actions>
+</mat-card>

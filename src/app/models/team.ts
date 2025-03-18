@@ -1,5 +1,5 @@
 export interface Team {
-  id: number;
+  id?: number;
   name: string;
   league: string;
   logo: string;

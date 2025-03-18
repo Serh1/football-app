@@ -1,0 +1,14 @@
+.teams-wrapper {
+  display: flex;
+  padding: 15px 50px;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.teamInput{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
