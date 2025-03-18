@@ -12,7 +12,6 @@ import {Team} from '../models/team';
 import {
   MatDialog
 } from '@angular/material/dialog'
-import {Player} from '../models/player';
 import {PlayerDialogComponent} from '../player-dialog/player-dialog.component';
 
 

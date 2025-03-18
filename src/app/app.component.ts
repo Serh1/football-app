@@ -31,7 +31,7 @@ export class AppComponent {
   }
 
   loadPlayers(){
-    const players = this.teamsService.getAllPlayers();
+    const players= this.teamsService.getAllPlayers();
     return players;
   }
 }

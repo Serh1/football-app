@@ -1,17 +1,18 @@
 import {Injectable} from '@angular/core';
 import {Team} from '../models/team';
 import {Player} from '../models/player';
+//import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TeamsService {
 
-  constructor() {
-  }
+  allTeams:Team[] = [];
+  //url = 'localhost:8080/api/v1/teams';
 
-  getAllTeams(): Team[] {
-    return [
+  constructor(/*private http:HttpClient*/) {
+    this.allTeams = [
       {
         id: 1,
         name: 'FC Barcelona',
@@ -31,7 +32,7 @@ export class TeamsService {
         gamesPlayed: 10,
         wins: 7,
         draws: 2,
-        losses: 2,
+        losses: 0,
         points: 27
       },
       {
@@ -81,6 +82,18 @@ export class TeamsService {
     ];
   }
 
+  saveTeam(team:Team){
+    //this.http.post(this.url, team);
+  }
+
+  getAllTeams(): Team[] {
+    return this.allTeams
+  }
+
+  addNewTeam(newTeam:Team){
+    this.allTeams.push(newTeam)
+    console.log(newTeam);
+  }
 
 
 //   TODO: Get a team from id
