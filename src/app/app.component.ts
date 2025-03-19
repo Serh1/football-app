@@ -11,7 +11,7 @@ import {JsonPipe} from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatTabGroup, MatTab, StandingsComponent, TeamsComponent, GamesComponent, JsonPipe],
+  imports: [RouterOutlet, MatTabGroup, MatTab, StandingsComponent, TeamsComponent, GamesComponent],
   templateUrl: './app.component.html',
   standalone: true,
   styleUrl: './app.component.css'
@@ -31,8 +31,7 @@ export class AppComponent {
     return teams.sort((t1, t2) => t2.points - t1.points);
   }
 
-  loadPlayers(){
-    const players= this.teamsService.getAllPlayers();
-    return players;
+  loadPlayers() {
+    return this.teamsService.getAllPlayers();
   }
 }

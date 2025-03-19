@@ -36,7 +36,6 @@ import {MatSort} from '@angular/material/sort';
 export class StandingsComponent {
 
   displayedColumns: string[] = ['position', 'progress', 'name', 'wins', 'draws', 'losses', 'points'];
-
   teams = input.required<Team[]>();
 
 }

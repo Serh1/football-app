@@ -2,17 +2,17 @@
   width: 100%;
 }
 
-.team-details{
+.team-details {
   display: flex;
   justify-content: center;
 }
 
-mat-card-title{
+mat-card-title {
   display: flex;
   justify-content: center;
 }
 
-mat-card-subtitle{
+mat-card-subtitle {
   display: flex;
   justify-content: center;
   opacity: 50%;

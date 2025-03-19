@@ -3,17 +3,14 @@ import {Team} from '../models/team';
 import {Player} from '../models/player';
 import {Game} from '../models/game';
 
-//import {HttpClient} from '@angular/common/http';
-
 @Injectable({
   providedIn: 'root'
 })
 export class TeamsService {
 
-  allTeams:Team[] = [];
-  //url = 'localhost:8080/api/v1/teams';
+  allTeams: Team[] = [];
 
-  constructor(/*private http:HttpClient*/) {
+  constructor() {
     this.allTeams = [
       {
         id: 1,
@@ -84,7 +81,7 @@ export class TeamsService {
     ];
   }
 
-  saveTeam(team:Team){
+  saveTeam(team: Team) {
     //this.http.post(this.url, team);
   }
 
@@ -92,15 +89,13 @@ export class TeamsService {
     return this.allTeams
   }
 
-  addNewTeam(newTeam:Team){
+  addNewTeam(newTeam: Team) {
     this.allTeams.push(newTeam)
     console.log(this.allTeams);
   }
 
-
-//   TODO: Get a team from id
   getAllPlayers(): Player[] {
-    return[
+    return [
       {id: 1, firstName: 'Thibaut', lastName: 'Courtois', position: 'Goalkeeper', club: 'Real Madrid'},
       {id: 2, firstName: 'Manuel', lastName: 'Neuer', position: 'Goalkeeper', club: 'Bayern Munich'},
       {id: 3, firstName: 'Marc-André', lastName: 'ter Stegen', position: 'Goalkeeper', club: 'Barcelona'},
@@ -127,8 +122,9 @@ export class TeamsService {
       {id: 24, firstName: 'Raphaël', lastName: 'Varane', position: 'Defender', club: 'Manchester United'}
     ]
   }
-  getAllGames() :Game[] {
-    return[
+
+  getAllGames(): Game[] {
+    return [
       {
         id: 1,
         localDateTime: '2025-03-18T15:00:00',

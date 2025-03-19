@@ -9,11 +9,8 @@ import {
 } from '@angular/material/card';
 import {MatButton, MatButtonModule} from '@angular/material/button';
 import {Team} from '../models/team';
-import {
-  MatDialog
-} from '@angular/material/dialog'
+import {MatDialog} from '@angular/material/dialog'
 import {PlayerDialogComponent} from '../player-dialog/player-dialog.component';
-
 
 @Component({
   selector: 'app-team-card',
@@ -36,9 +33,8 @@ export class TeamCardComponent {
   team = input<Team>()
   dialog = inject(MatDialog);
 
-
   onSeePlayers(team: string | undefined) {
-    this.dialog.open(PlayerDialogComponent,{data: team});
+    this.dialog.open(PlayerDialogComponent, {data: team});
   }
 }
 
