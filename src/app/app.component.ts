@@ -7,10 +7,11 @@ import {GamesComponent} from './games/games.component';
 import {TeamsService} from './services/teams.service';
 import {Team} from './models/team';
 import {Player} from './models/player';
+import {JsonPipe} from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatTabGroup, MatTab, StandingsComponent, TeamsComponent, GamesComponent],
+  imports: [RouterOutlet, MatTabGroup, MatTab, StandingsComponent, TeamsComponent, GamesComponent, JsonPipe],
   templateUrl: './app.component.html',
   standalone: true,
   styleUrl: './app.component.css'

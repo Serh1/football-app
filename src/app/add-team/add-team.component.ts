@@ -11,7 +11,7 @@ import {
   MatCardHeader,
   MatCardTitle
 } from '@angular/material/card';
-import {FormsModule} from '@angular/forms';
+import {FormControl, FormsModule} from '@angular/forms';
 import {TeamsService} from '../services/teams.service';
 
 @Component({
@@ -37,7 +37,7 @@ export class AddTeamComponent {
   teamsService = inject(TeamsService);
   teams:Team[] =[];
   newTeam:Team = {
-    draws: 0, gamesPlayed: 0, id: undefined, league: '', logo: '', losses: 0, name: '', points: 0, wins: 0
+    id: 0, name: '' , league: '', logo: '', gamesPlayed: 0, wins: 0, losses: 0, draws: 0, points: 0
   };
 
   constructor() {
@@ -45,17 +45,27 @@ export class AddTeamComponent {
   }
 
 
-  loadTeams() {
-    const teams = this.teamsService.getAllTeams();
-    return teams.sort((t1, t2) => t2.points - t1.points);
+  loadTeams():Team[] {
+    const team = this.teamsService.getAllTeams();
+    return team;
   }
 
 
 
   onAddTeam(){
-    this.teamsService.addNewTeam(this.newTeam)
-    this.newTeam.gamesPlayed = this.newTeam.wins + this.newTeam.losses + this.newTeam.draws;
-    this.newTeam.points = this.newTeam.draws +(this.newTeam.wins *3);
+
+    this.teamsService.addNewTeam({
+      id: this.teams.length+1,
+      name: this.newTeam.name,
+      league: this.newTeam.league,
+      logo: this.newTeam.logo,
+      gamesPlayed: this.newTeam.gamesPlayed,
+      wins: this.newTeam.wins,
+      draws: this.newTeam.draws,
+      losses: this.newTeam.losses,
+      points: this.newTeam.points
+    })
+  };
     //push team into backend
-  }
+
 }

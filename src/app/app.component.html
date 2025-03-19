@@ -7,6 +7,9 @@
       </mat-tab>
       <mat-tab label="Teams">
         <app-teams [teams]="teams"></app-teams>
+
+        {{teams | json}}
+
       </mat-tab>
       <mat-tab label="Games">
         <app-games></app-games>
