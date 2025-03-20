@@ -33,7 +33,7 @@ export class AddTeamComponent {
   teamsService = inject(TeamsService);
   teams: Team[] = [];
   newTeam: Team = {
-    id: 0, name: '', league: '', logo: '', gamesPlayed: 0, wins: 0, losses: 0, draws: 0, points: 0
+    id: 0, name: '', league: '', logo: './assets/images/barcelona.png', gamesPlayed: 0, wins: 0, losses: 0, draws: 0, points: 0
   };
 
   constructor() {
