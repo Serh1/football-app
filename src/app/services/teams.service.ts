@@ -1,7 +1,9 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {Team} from '../models/team';
 import {Player} from '../models/player';
 import {Game} from '../models/game';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +12,7 @@ export class TeamsService {
 
   allTeams: Team[] = [];
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.allTeams = [
       {
         id: 1,
@@ -89,8 +91,8 @@ export class TeamsService {
     return this.allTeams.find(team => team.id === id)
   }
 
-  getAllTeams(): Team[] {
-    return this.allTeams
+  getAllTeams(): Observable<Team[]> {
+    return this.http.get<Team[]>('http://localhost:8080/api/v1/teams')
   }
 
   addNewTeam(newTeam: Team) {

@@ -8,6 +8,7 @@ import {Team} from '../models/team';
 import {MatCard, MatCardActions, MatCardHeader, MatCardTitle} from '@angular/material/card';
 import {FormsModule} from '@angular/forms';
 import {TeamsService} from '../services/teams.service';
+import {Observable, of} from 'rxjs';
 
 @Component({
   selector: 'app-add-team',
@@ -31,7 +32,7 @@ import {TeamsService} from '../services/teams.service';
 export class AddTeamComponent {
 
   teamsService = inject(TeamsService);
-  teams: Team[] = [];
+  teams: Observable<Team[]> = of([]);
   newTeam: Team = {
     id: 0, name: '', league: '', logo: './assets/images/barcelona.png', gamesPlayed: 0, wins: 0, losses: 0, draws: 0, points: 0
   };
@@ -40,13 +41,13 @@ export class AddTeamComponent {
     this.teams = this.loadTeams()
   }
 
-  loadTeams(): Team[] {
+  loadTeams(): Observable<Team[]> {
     return this.teamsService.getAllTeams();
   }
 
   onAddTeam() {
     this.teamsService.addNewTeam({
-      id: this.teams.length + 1,
+      id: this.newTeam.id,
       name: this.newTeam.name,
       league: this.newTeam.league,
       logo: this.newTeam.logo,
