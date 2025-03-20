@@ -85,6 +85,10 @@ export class TeamsService {
     //this.http.post(this.url, team);
   }
 
+  getTeamById(id: number | undefined){
+    return this.allTeams.find(team => team.id === id)
+  }
+
   getAllTeams(): Team[] {
     return this.allTeams
   }

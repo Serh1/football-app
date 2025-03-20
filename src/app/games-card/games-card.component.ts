@@ -1,7 +1,5 @@
-import {Component, inject, input} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {MatCard} from "@angular/material/card";
-import {Game} from '../models/game';
-import {TeamsService} from '../services/teams.service';
 
 @Component({
   selector: 'app-games-card',
@@ -13,17 +11,6 @@ import {TeamsService} from '../services/teams.service';
   styleUrl: './games-card.component.css'
 })
 export class GamesCardComponent {
-  teamsService = inject(TeamsService);
-  games: Game[] = [];
-  newGame: Game = {
-    id: undefined, awayTeamGoals: 0, awayTeamId: 0, homeTeamGoals: 0, homeTeamId: 0, localDateTime: '', location: ''
-  }
+  @Input() gameDetail: any
 
-  constructor() {
-    this.loadGames()
-  }
-
-  loadGames() {
-    const teams = this.teamsService.getAllTeams()
-  }
 }

@@ -1,3 +1,5 @@
 <div class="games-wrapper">
-  <app-games-card></app-games-card>
+  @for (gameDetail of gameDetails; track gameDetail) {
+    <app-games-card [gameDetail]="gameDetail"></app-games-card>
+  }
 </div>
